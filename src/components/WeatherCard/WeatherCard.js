@@ -9,7 +9,7 @@ const useStyles = makeStyles({
     boxSizing: "border-box",
     margin: "64px auto",
     padding: "10px",
-    height: "500px",
+    height: "400px",
     width: "95%",
     maxWidth: "600px",
   },
