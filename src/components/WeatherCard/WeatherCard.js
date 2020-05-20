@@ -62,7 +62,10 @@ const useStyles = makeStyles({
     "&>img": {
       backgroundColor: "#9bc0ff",
       height: "100px",
-      borderRadius: "50px"
+      borderRadius: "50px",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
     },
     "&>h2": {
       margin: "0",
