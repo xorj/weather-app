@@ -1,6 +1,5 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-
 const useStyles = makeStyles({
   card: {
     display: "flex",
@@ -49,7 +48,7 @@ const useStyles = makeStyles({
   flag: {
     height: "24px",
     backgroundColor: "#9bc0ff",
-    borderRadius: "16px"
+    borderRadius: "16px",
   },
   weatherIcon: {
     boxSizing: "border-box",
@@ -69,8 +68,8 @@ const useStyles = makeStyles({
     },
     "&>h2": {
       margin: "0",
-    padding: "5px"
-      }  
+      padding: "5px",
+    },
   },
   temperatures: {
     width: "90%",
@@ -152,8 +151,11 @@ const WeatherCard = (props) => {
         </div>
       </div>
       <div className={classes.weatherIcon}>
-        <img src={`/img/weather-icons/${icon}-s.svg`} alt={"Icon not found."} />
-            <h2>{phrase}</h2>
+        <img
+          src={`${process.env.PUBLIC_URL}/assets/img/weather-icons/${icon}-s.svg`}
+          alt={"Icon not found."}
+        />
+        <h2>{phrase}</h2>
       </div>
       <div className={classes.temperatures}>
         <h1>
