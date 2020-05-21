@@ -1,5 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import Card from '@material-ui/core/Card';
 const useStyles = makeStyles({
   card: {
     display: "flex",
@@ -9,9 +10,10 @@ const useStyles = makeStyles({
     boxSizing: "border-box",
     margin: "64px auto",
     padding: "10px",
-    height: "400px",
+    height: "420px",
     width: "95%",
     maxWidth: "600px",
+    backgroundColor: "rgba(255, 255, 255, 0.8)"
   },
   cityInfo: {
     boxSizing: "border-box",
@@ -57,7 +59,7 @@ const useStyles = makeStyles({
     alignItems: "center",
     justifyContent: "center",
     height: "30%",
-    width: "100%",
+    width: "100%",      
     "&>img": {
       backgroundColor: "#9bc0ff",
       height: "100px",
@@ -67,14 +69,16 @@ const useStyles = makeStyles({
       alignItems: "center",
     },
     "&>h2": {
-      margin: "0",
+      margin: "5px 0",
       padding: "5px",
+      backgroundColor: "rgba(0,0,0, 0.2)",
+      borderRadius: "5px",
     },
   },
   temperatures: {
     width: "90%",
     padding: "10px 0",
-    backgroundColor: "#3d5afe",
+    backgroundColor: "#3f51b5",
     borderRadius: "10px",
     boxShadow: "-5px -5px 1px 0px rgba(0,0,0, 0.2)",
     boxSizing: "border-box",
@@ -132,7 +136,7 @@ const WeatherCard = (props) => {
     phrase = props.dayPhrase;
   }
   return (
-    <div className={classes.card}>
+    <Card className={classes.card}>
       <div className={classes.cityInfo}>
         <div className={classes.location}>
           <h2>{props.city + ", " + props.state}</h2>
@@ -167,7 +171,7 @@ const WeatherCard = (props) => {
           <sup>°C</sup>
         </h3>
       </div>
-    </div>
+    </Card>
   );
 };
 

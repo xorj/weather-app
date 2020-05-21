@@ -107,7 +107,13 @@ class App extends Component {
       content = <Alert severity="error">{this.state.errorMessage}</Alert>;
     } else {
       if (!this.state.hasInfo && !this.state.isLoading) {
-        content = <h2>Please search for a city.</h2>;
+        content = <h2 style ={{
+          color: "white",
+          margin: "5px 0",
+          padding: "5px",
+          backgroundColor: "rgba(0,0,0, 0.2)",
+          borderRadius: "5px",
+        }}>Please search for a city.</h2>;
       } else if (this.state.isLoading) {
         content = <LoadSpinner />;
       } else {
@@ -135,6 +141,10 @@ class App extends Component {
           alignItems: "center",
           height: "100%",
           width: "100%",
+          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/bg-image.jpg)`,
+          backgroundSize: "cover"
+
+
         }}
       >
         <LogoBar color="default">

@@ -1,23 +1,25 @@
 import React from "react";
 import styled from "styled-components";
+import Card from '@material-ui/core/Card';
 
 const LoadSpinner = styled.div`
-  font-size: 10px;
-  margin: 50px auto;
+  
+font-size: 10px;
+  margin: 50px 50px;
   text-indent: -9999em;
   width: 11em;
   height: 11em;
   border-radius: 50%;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.1);
   background: -moz-linear-gradient(left, #3d5afe 10%, rgba(0, 0, 255, 0) 42%);
   background: -webkit-linear-gradient(
     left,
     #0000ff 10%,
     rgba(0, 0, 255, 0) 42%
   );
-  background: -o-linear-gradient(left, #3d5afe 10%, rgba(0, 0, 255, 0) 42%);
-  background: -ms-linear-gradient(left,#3d5afe 10%, rgba(0, 0, 255, 0) 42%);
-  background: linear-gradient(to right, #3d5afe 10%, rgba(0, 0, 255, 0) 42%);
+  background: -o-linear-gradient(left, #3f51b5 10%, rgba(0, 0, 255, 0) 42%);
+  background: -ms-linear-gradient(left,#3f51b5 10%, rgba(0, 0, 255, 0) 42%);
+  background: linear-gradient(to right,#3f51b5 10%, rgba(0, 0, 255, 0) 42%);
   position: relative;
   -webkit-animation: load3 1.4s infinite linear;
   animation: load3 1.4s infinite linear;
@@ -71,7 +73,7 @@ const LoadSpinner = styled.div`
 `;
 
 const loadSpinner = () => {
-  return <LoadSpinner />;
+  return (<Card><LoadSpinner /></Card>);
 };
 
 export default loadSpinner;
