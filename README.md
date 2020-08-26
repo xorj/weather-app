@@ -1,6 +1,6 @@
 # [Weather App](https://xorj.github.io/weather-app/)
 
-A React weather application to get the temperature, weather condition and whether it is day or night of a particular city using `accuweather`. A free weather api.
+A React weather application to get the temperature, weather condition and whether it is day or night of a particular city using `accuweather`.
 
 ## User Stories
 
